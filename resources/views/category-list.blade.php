@@ -9,10 +9,10 @@
                     <div class="card" style="margin-bottom: 20px;">
                         <div class="card-header d-flex justify-content-between">
                             <div>
-                                <h2>All Packages</h2>
+                                <h2>All Categories</h2>
                             </div>
                             <div>
-                                <a href="{{ url('admin/add-product') }}" class="btn btn-primary float-end">Add New Package</a>
+                                <a href="{{ url('admin/add-category') }}" class="btn btn-primary float-end">Add New Categoty</a>
                             </div>
 
                         </div>
@@ -21,29 +21,21 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Package Title</th>
-                                        <th>Price</th>
-                                        <th>Image</th>
-                                        <th>Discription</th>
+                                        <th>Category</th>
                                         <th>Edit</th>
                                         <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($packages as $package)
+                                    @foreach ($categories as $category)
                                     <tr>
-                                        <td>{{ $package->package_id }}</td>
-                                        <td>{{ $package->package_name }}</td>
-                                        <td>{{ $package->package_price }}</td>
+                                        <td>{{ $category->id }}</td>
+                                        <td>{{ $category->Name }}</td>
                                         <td>
-                                            <img src="{{asset('img/'.$package->package_img)}} " width="50px" height="50px">
-                                        </td>
-                                        <td>{{ $package->package_desc }}</td>
-                                        <td>
-                                            <a href="{{'package-edit/'.$package->package_id}}" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="{{'category-edit/'.$category->id}}" class="btn btn-primary btn-sm">Edit</a>
                                         </td>
                                         <td>
-                                            <a href="{{('package-delete/'.$package->package_id)}}" class="btn btn-danger btn-sm">Delete</a>
+                                            <a href="{{'category-delete/'.$category->id}}" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach

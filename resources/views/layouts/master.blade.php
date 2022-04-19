@@ -20,6 +20,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <style>
+        .customer-table
+        {
+            counter-reset: tableCount;
+        }
+        .counterCell:before
+        {
+            content: counter(tableCount);
+            counter-increment: tableCount;
+        }
+    </style>
 </head>
 <body>
 

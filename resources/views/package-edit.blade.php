@@ -13,11 +13,11 @@
                                 <h2>Edit Package</h2>
                             </div>
                             <div>
-                                <a href="{{ url('add-product') }}" class="btn btn-danger float-end">BACK</a>
+                                <a href="{{ url('admin/add-product') }}" class="btn btn-danger float-end">BACK</a>
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="{{ url('update-product/'.$package[0]->package_id)}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ url('admin/update-product/'.$package[0]->package_id)}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group mb-3">

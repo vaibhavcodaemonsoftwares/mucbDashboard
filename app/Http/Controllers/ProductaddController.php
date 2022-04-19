@@ -52,7 +52,7 @@ class ProductaddController extends Controller
         $package = DB::select('select * from packages where package_id = ?', [$id]);
         $package_nm = $req->input('package_name');
         $package_price = $req->input('package_price');
-        
+
         if($req->hasfile('package_img'))
         {
             $dest = 'img/'.$package[0]->package_img;
@@ -70,7 +70,7 @@ class ProductaddController extends Controller
         DB::update('update packages set package_name= ?,package_price=?,package_img=?,package_desc=? where package_id = ?',[$package_nm,$package_price,$filenm,$package_desc,$id]);
         return redirect()->back()->with('result','Product Updated Successfully');
     }
-    
+
     //Delete Package
     function deletePackage($id)
     {
@@ -81,6 +81,6 @@ class ProductaddController extends Controller
             File::delete($dest);
         }
         DB::delete('delete from packages where package_id = ?',[$id]);
-        return redirect()->back()->with('result','Product deleted Successfully');;
+        return redirect()->back()->with('result','Product deleted Successfully');
     }
 }

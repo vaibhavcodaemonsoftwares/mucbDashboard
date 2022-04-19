@@ -30,7 +30,7 @@
     </li>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="#" >
+        <a class="nav-link" href="{{ url('admin/order-list') }}" >
             <i class="fas fa-fw fa-wrench"></i>
             <span>Orders</span>
         </a>
@@ -43,13 +43,13 @@
     </div>
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('admin/customers-list') }}">
             <i class="fas fa-fw fa-folder"></i>
             <span>Customers</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('admin/inspector-list') }}" >
             <i class="fas fa-fw fa-folder"></i>
             <span>Inspectors</span>
         </a>
@@ -63,7 +63,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ url('admin/category-list') }}">
             <i class="fas fa-fw fa-folder"></i>
             <span>Add Categories</span>
         </a>
